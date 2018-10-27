@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+
+<style>
+
+body {
+  background-color: white;
+  font: 1em Helvetica;
+}
+
+#container {
+  width: 840px;
+  margin: 25px auto;
+}
+
+.business_logo_section {
+  float: left;
+  background-color: white;
+  width: 480px;
+  height: 661px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.login {
+  float: right;
+  width: 300px;
+  padding: 40px 20px;
+  padding-top: 150px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+[type=password] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+[type='password']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+textarea {
+
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 95px;
+  line-height: 15px;  
+  margin: 20px 30px 20px 0;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+
+select {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 15px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+h1 {
+  color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+p {
+  color: rgba(0,0,0,.6);
+  font-size: 1.2em;
+  margin: 20px 0 20px 0;
+}
+
+label {
+
+	color: rgba(0,0,0,.6);
+  	font-size: 1.2em;
+  	margin: 20px 0 20px 0;
+
+}
+
+
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+
+.signup__link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+  &:focus,
+  &:hover {color: darken(#999, 13%);}
+}
+
+
+</style>
+</head>
+
+<body>
+
+	
+  <div id='container'>
+
+  <div class='login'>
+     <form>
+
+       <input type='text' placeholder='Company Name:*'  required/>
+       <input type='text' placeholder='Email:*'  required/>
+       <input type='password' placeholder='Account Password:*' required/>
+       
+
+       <input type='submit' value='Login' placeholder='Log in'  />
+
+     </form>
+
+     <a class="signup__link" href="#">I am not yet a member. Where do I register!</a>
+     
+  </div>
+
+  <div class='business_logo_section'>
+    <h1>Business Studs</h1>
+    <h2> Log in</h2>
+    <img src="businessLogo.png" alt="Business Logo" width="350" height="350">
+    
+    <p> Enter to get access to consistent growth! </p>
+
+       
+  </div>
+  
+
+  </div>
+
+</body>
+</html>

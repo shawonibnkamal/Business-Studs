@@ -1,0 +1,489 @@
+<html lang="en">
+<head>
+
+  <script type='text/javascript'>
+
+       //Code for showing profile image after file has been uploaded
+      function preview_image(event) 
+      {
+          var reader = new FileReader();
+          reader.onload = function()
+      {
+          var output = document.getElementById('output_image');
+          output.src = reader.result;
+      }
+          reader.readAsDataURL(event.target.files[0]);
+      }
+
+      //Code for showing speciality and checkboxes
+      var expanded = false;
+      function showCheckboxes() {
+       			var checkboxes = document.getElementById("checkboxes");
+       			if(!expanded) {
+       				checkboxes.style.display = "block";
+       				expanded = true;
+       			} else {
+       				checkboxes.style.display = "none";
+       				expanded = false;
+       			}
+
+       		}
+
+      //Code for showing languages and checkboxes
+      var expanded2 = false;
+      function showLanguageCheckboxes() {
+            var checkboxes = document.getElementById("languagescheckboxes");
+            if(!expanded2) {
+              checkboxes.style.display = "block";
+              expanded2 = true;
+            } else {
+              checkboxes.style.display = "none";
+              expanded2 = false;
+            }
+
+          }
+
+      function contactinfoCheck() {
+        if (document.getElementById('skypeCheck').checked) {
+          document.getElementById('ifskype').style.display = 'block';
+        }
+        else {
+          document.getElementById('ifskype').style.display = 'none';
+        }
+
+        if (document.getElementById('whatsappCheck').checked) {
+          document.getElementById('ifwhatsapp').style.display = 'block';
+        }
+        else {
+          document.getElementById('ifwhatsapp').style.display = 'none';
+        }
+
+
+        if (document.getElementById('imoCheck').checked) {
+          document.getElementById('ifImo').style.display = 'block';
+        }
+        else{
+          document.getElementById('ifImo').style.display = 'none';
+        }
+
+
+        if (document.getElementById('lineCheck').checked) {
+          document.getElementById('ifLine').style.visibility = 'visible';
+        }
+        else{
+          document.getElementById('ifLine').style.visibility = 'hidden';
+        }
+
+    
+
+      }
+     
+
+
+  </script>
+
+<style>
+
+body {
+  background-color: white;
+  font: 1em Helvetica;
+}
+
+#container {
+  width: 840px;
+  margin: 25px auto;
+}
+
+.whysignwithus {
+  float: top;
+  background-color: white;
+  width: 650px;
+  height: 255px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.signup {
+  float: center;
+  width: 600px;
+  padding: 35px 3px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+[type=password] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+[type='password']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+textarea {
+
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 95px;
+  line-height: 15px;  
+  margin: 20px 30px 20px 0;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+
+select {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 15px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+h1 {
+  color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 2.5em;
+  margin-top: 3px;
+}
+
+p {
+  color: rgba(0,0,0,.6);
+  font-size: 1.2em;
+  margin: 10px 0 20px 0;
+}
+
+label {
+
+	color: rgba(0,0,0,.6);
+  	font-size: 1.2em;
+  	margin: 20px 0 20px 0;
+
+}
+
+
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+
+.signup__link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+  &:focus,
+  &:hover {color: darken(#999, 13%);}
+}
+
+
+img {
+  padding: .5em;
+  max-width: 250px;
+  float: left;
+}
+
+input[type=file] {
+
+  padding:20px;
+  background-color: white; 
+  margin-bottom: 40px;
+}
+
+
+
+.selectBox{
+	position: relative;
+	display: block;
+  	margin: 0 auto;
+  	border: 0;
+  	height: 45px;
+  	line-height: 15px; 
+  	margin-top: 20px; 
+  	margin-bottom: 10px;
+  	font-size: 1em;
+  	color: rgba(0,0,0,.4);
+	
+}
+
+.selectBox select {
+	width: 97%;
+	
+}
+
+.overSelect{
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+#checkboxes {
+	display: none;
+	border: 1px #dadada solid;
+	left: 0;
+
+}
+
+#checkboxes label {
+	display: block;
+
+}
+
+#checkboxes label:hover {
+	background-color: #1e90ff;
+}
+
+
+#languagescheckboxes {
+  display: none;
+  border: 1px #dadada solid;
+  left: 0;
+
+}
+
+#languagescheckboxes label {
+  display: block;
+
+}
+
+#languagescheckboxes label:hover {
+  background-color: #1e90ff;
+}
+
+
+</style>
+</head>
+
+<body>
+
+	
+  <div id='container'>
+
+  <div class='whysignwithus'>
+    <img src="businessLogo.png" alt="Business Logo" width="250" height="250">
+    <h1>  Business Studs</h1>
+    <h2 style="margin-top: -15px;"> Sales Professional</h2>
+    <p> Connect with Businesses WorldWide! </p>
+       
+  </div>
+
+  <div class='signup'>
+     <form>
+       <input type='text' placeholder='First Name:*' required/>
+       <input type='text' placeholder='Last Name:*'  required/>
+       <input type='text' placeholder='Email:*'  required/>
+       <input type='password' placeholder='Account Password:*' required/>
+       <input type='password' placeholder='Confirm Password:*' required/>
+
+       <label for="profilePicture"> Upload an Appropriate Profile Picture:* </label>
+       <p> Ideal Size: 150px X 150px </p>
+
+
+       <input type="file" accept="image/*" onchange="preview_image(event)" required>
+       <img id="output_image" src="upload_icon.png"/>
+       
+       
+
+       <select id="experience_years" name="experience" required>
+          <optgroup label="Experience">
+
+          	<option value='' disabled selected>Years of Experience*</option>
+            <option value="interval1">Less than 1 year</option>
+            <option value="interval2">1 - 5 years</option>
+            <option value="interval3">6 - 10 years </option>
+            <option value="interval4">11 - 15 years </option>
+            <option value="interval5">16 - 20 years </option>
+            <option value="interval6">21 - 25 years </option>
+            <option value="interval7">26 - 30 years </option>
+            <option value="interval8">31 - 35 years </option>
+            <option value="interval9">36 - 40 years </option>
+            <option value="interval10">41 - 45 years </option>
+            <option value="interval11">46 - 50 years </option>
+            <option value="interval12">51 - 55 years </option>
+            <option value="interval13">56 - 60 years </option>
+            <option value="interval14">60+ years </option>         
+            
+          </optgroup>       
+        </select>
+
+       
+       	<div class="selectBox" onclick="showCheckboxes()">
+       		<select>
+       			<option> Sales Technique* </option>
+       		</select>
+       		<div class="overSelect"></div>
+       	</div>
+       	<div id="checkboxes">
+
+       		<label for="one"> <input type="checkbox" id="telesales"/> Telesales </label>
+       		<label for="two"> <input type="checkbox" id="doortodoor"/> Door to Door </label>
+       		<label for="three"> <input type="checkbox" id="onlinedemos"/> Online Demos </label>
+       		<label for="four"> <input type="checkbox" id="affiliate"/> Affiliate Link </label>
+       		<label for="five"> <input type="checkbox" id="appointment"/> Appointment Setting </label>
+       			
+       	</div>
+
+
+       	<select id="speciality" style="margin-top: 20px; margin-bottom: 20px;" required>
+          <optgroup label="Sales Speciality">
+
+          	<option value='' disabled selected>Speciality*</option>
+            <option value="speciality1">B2B</option>
+            <option value="speciality2">B2C</option>
+            <option value="speciality3">Both B2B and B2C</option>      
+            
+          </optgroup>       
+        </select>
+ 
+
+         <!-- Code for selecting languages -->
+        <div class="selectBox" onclick="showLanguageCheckboxes()">
+          <select>
+            <option> Languages Spoken* </option>
+          </select>
+          <div class="overSelect"></div>
+        </div>
+        <div id="languagescheckboxes">
+
+          <label for="one"> <input type="checkbox" id="english"/> English </label>
+          <label for="two"> <input type="checkbox" id="french"/> French </label>
+          <label for="three"> <input type="checkbox" id="spanish"/> Spanish </label>
+
+          <label for="four"> <input type="checkbox" id="chinese"/> Mandarin Chinese </label>
+          <label for="five"> <input type="checkbox" id="japanese"/> Japanese </label>
+
+          <label for="six"> <input type="checkbox" id="hindustani"/> Hindustani </label>
+          <label for="seven"> <input type="checkbox" id="arabic"/> Arabic </label>
+          <label for="eight"> <input type="checkbox" id="malay"/> Malay </label>
+          <label for="nine"> <input type="checkbox" id="russian"/> Russian </label>
+          <label for="ten"> <input type="checkbox" id="bengali"/> Bengali </label>
+          <label for="eleven"> <input type="checkbox" id="portuguese"/> Portuguese </label>
+          <label for="twelve"> <input type="checkbox" id="german"/> German </label>
+          <label for="thirteen"> <input type="checkbox" id="italian"/> Italian </label>
+
+          <label for="fourteen"> <input type="checkbox" id="turkish"/> Turkish </label>
+          <label for="fifteen"> <input type="checkbox" id="dutch"/> Dutch </label>
+            
+        </div>
+
+        <input type='text' placeholder='Other Languages:'  />
+       
+
+       	
+        <!-- Address section of code -->
+       <label for="permanentAddress" style="margin-top: 20px;"> Permanent Address: </label>
+       
+	     <input type='text' placeholder='Street Addresss:' />
+       
+       <!-- Getting script from file to load countries code -->
+       <script type= "text/javascript" src = "countries.js"></script>
+
+       <select id="country" name ="country" required>
+         <optgroup>
+          <option value='' disabled selected>Country*....</option>
+         </optgroup>
+       </select> 
+       
+       <select name ="state" id ="state" required>
+         <optgroup>
+          <option value='' disabled selected>State*....</option>
+         </optgroup>
+       </select> 
+       <!-- Script for loading countries from file into select fields. Should be left here -->
+       <script language="javascript">
+          populateCountries("country", "state"); 
+      </script>
+
+
+	
+
+        <!-- Contact section of code -->
+       <label for="contactinfo" style="margin-top: 20px;"> Contact Information: </label>
+
+       <input type='text' placeholder='Phone Number*:'  required/>
+       <input type='text' placeholder='LinkedIn URL:'  />
+
+       <p>Skype</p> <input type="checkbox" onclick="javascript:contactinfoCheck();" name="skype" id="skypeCheck"> 
+       <p>Whatsapp</p> <input type="checkbox" onclick="javascript:contactinfoCheck();" name="whatsapp" id="whatsappCheck">
+       IMO <input type="checkbox" onclick="javascript:contactinfoCheck();" name="imo" id="imoCheck">
+       Line <input type="checkbox" onclick="javascript:contactinfoCheck();" name="line" id="lineCheck"><br>
+
+       <div id="ifskype" style="display:none">
+        <input type='text' id='skypefield' name='skypeinformation' placeholder="Enter Skype Information"><br>
+       </div>
+
+       <div id="ifwhatsapp" style="display:none">
+        <input type='text' id='whatsappfield' name='whatsappinformation' placeholder="Enter Whatsapp Number with + In front"><br>
+       </div>
+
+       <div id="ifImo" style="display:none">
+        <input type='text' id='imofield' name='imoinformation' placeholder="Enter IMO Information"><br>
+       </div>
+
+       <div id="ifLine" style="visibility:hidden">
+        <input type='text' id='linefield' name='lineinformation' placeholder="Enter Line Information"><br>
+       </div>
+
+       <input type='submit' value='Sign Up' placeholder='Sign Up'  />
+       <a class="signup__link" href="login_page.html">I have already registered. Take me to Log in!</a>
+
+      
+     </form>
+     
+  </div>
+  
+
+  </div>
+
+</body>
+</html>

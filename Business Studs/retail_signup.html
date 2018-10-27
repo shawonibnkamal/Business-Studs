@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+
+<style>
+
+body {
+  background-color: white;
+  font: 1em Helvetica;
+}
+
+#container {
+  width: 840px;
+  margin: 25px auto;
+}
+
+.whysignwithus {
+  float: right;
+  background-color: white;
+  width: 480px;
+  height: 661px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+.signup {
+  float: left;
+  width: 300px;
+  padding: 40px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+[type=password] {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+}
+
+
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+[type='password']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+textarea {
+
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 95px;
+  line-height: 15px;  
+  margin: 20px 30px 20px 0;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+
+select {
+  display: block;
+  margin: 0 auto;
+  width: 97%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 15px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: rgba(0,0,0,.4);
+
+}
+h1 {
+  color: rgba(0,0,0,.7);
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+p {
+  color: rgba(0,0,0,.6);
+  font-size: 1.2em;
+  margin: 20px 0 20px 0;
+}
+
+label {
+
+	color: rgba(0,0,0,.6);
+  	font-size: 1.2em;
+  	margin: 20px 0 20px 0;
+
+}
+
+
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+
+.signup__link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+  &:focus,
+  &:hover {color: darken(#999, 13%);}
+}
+
+
+</style>
+</head>
+
+<body>
+
+	
+  <div id='container'>
+
+  <div class='signup'>
+     <form>
+       <input type='text' placeholder='First Name:*' required/>
+       <input type='text' placeholder='Last Name:*'  required/>
+       <input type='text' placeholder='Email:*'  required/>
+       <input type='password' placeholder='Account Password:*' required/>
+       <input type='password' placeholder='Confirm Password:*' required/>
+       <input type='text' placeholder='Company Name:*'  required/>
+       
+
+       <select id="industry" name="business_industry">
+          <optgroup label="Industry">
+          	<option value="industry_1">Industry</option>
+            <option value="industry_1">Agriculture</option>
+            <option value="industry_2">Apparel</option>
+            <option value="industry_3">Banking</option>
+            <option value="industry_4">Biotechnology</option>
+            <option value="industry_5">Chemicals</option>
+            <option value="industry_6">Communications</option>
+            <option value="industry_7">Construction</option>
+            <option value="industry_8">Consulting</option>
+            <option value="industry_9">Education</option>
+            <option value="industry_10">Electronics</option>
+
+            <option value="industry_11">Energy</option>
+            <option value="industry_12">Engineering</option>
+            <option value="industry_13">Entertainment</option>
+            <option value="industry_14">Environmental</option>
+            <option value="industry_15">Finance</option>
+            <option value="industry_16">Food & Beverage</option>
+            <option value="industry_17">Government</option>
+            <option value="industry_18">Healthcare</option>
+            <option value="industry_19">Hospitality</option>
+            <option value="industry_20">Insurance</option>
+
+            <option value="industry_21">Machinery</option>
+            <option value="industry_22">Manufacturing</option>
+            <option value="industry_23">Media</option>
+            <option value="industry_24">Not For Profit</option>
+            <option value="industry_25">Recreation</option>
+            <option value="industry_26">Retail</option>
+            <option value="industry_27">Shipping</option>
+            <option value="industry_28">Technology</option>
+            <option value="industry_29">Telecommunications</option>
+            <option value="industry_30">Transportation</option>
+            <option value="industry_31">Utilities</option>
+            <option value="industry_31">Other</option>
+            
+          </optgroup>       
+        </select>
+
+       <input type='text' placeholder='If Other Industry Selected:'/>
+
+       <label for="businessDecription"> Business Description:* </label>
+
+
+       <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> 
+	   <script type="text/javascript">
+
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+       </script>
+  
+
+       <textarea id="businessDecript" name="business_descript" placeholder="Business Description:* " required></textarea>
+
+       <input type='text' placeholder='Website Address:*'  required/>
+       <input type='text' placeholder='Phone Number:'  />
+
+       <input type='submit' value='Sign Up' placeholder='Sign Up'  />
+
+      
+     </form>
+     
+  </div>
+
+  <div class='whysignwithus'>
+    <h1>Business Studs</h1>
+    <h2>Retail</h2>
+    <img src="businessLogo.png" alt="Business Logo" width="350" height="350">
+    
+    
+    <p> Grow your business in Retail with Business Studs today! </p>
+
+    
+    <a class="signup__link" href="login_page.html">I have already registered. Take me to Log in!</a>
+       
+  </div>
+  
+
+  </div>
+
+</body>
+</html>
