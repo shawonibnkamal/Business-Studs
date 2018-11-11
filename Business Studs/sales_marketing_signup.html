@@ -1,35 +1,10 @@
 <html lang="en">
+
 <head>
 
-  <script type='text/javascript'>
+	<script type='text/javascript'>
 
-       //Code for showing profile image after file has been uploaded
-      function preview_image(event) 
-      {
-          var reader = new FileReader();
-          reader.onload = function()
-      {
-          var output = document.getElementById('output_image');
-          output.src = reader.result;
-      }
-          reader.readAsDataURL(event.target.files[0]);
-      }
-
-      //Code for showing speciality and checkboxes
-      var expanded = false;
-      function showCheckboxes() {
-       			var checkboxes = document.getElementById("checkboxes");
-       			if(!expanded) {
-       				checkboxes.style.display = "block";
-       				expanded = true;
-       			} else {
-       				checkboxes.style.display = "none";
-       				expanded = false;
-       			}
-
-       		}
-
-      //Code for showing languages and checkboxes
+	  //Code for showing languages and checkboxes
       var expanded2 = false;
       function showLanguageCheckboxes() {
             var checkboxes = document.getElementById("languagescheckboxes");
@@ -42,8 +17,7 @@
             }
 
           }
-
-      //Code for displaying other means on contact
+      //Code for showing other means of contact
       function contactinfoCheck() {
         if (document.getElementById('skypeCheck').checked) {
           document.getElementById('ifskype').style.display = 'block';
@@ -78,10 +52,8 @@
     
 
       }
-     
 
-
-  </script>
+	</script>
 
 <style>
 
@@ -301,21 +273,19 @@ input[type=file] {
   background-color: #1e90ff;
 }
 
-
 </style>
+
 </head>
 
 <body>
+	<div id='container'>
 
-	
-  <div id='container'>
-
-  <!-- Placing Logo beside sign up form -->
+  <!-- Placing logo and beside sign up form-->
   <div class='whysignwithus'>
     <img src="businessLogo.png" alt="Business Logo" width="250" height="250">
     <h1>  Business Studs</h1>
-    <h2 style="margin-top: -15px;"> Sales Professional</h2>
-    <p> Connect with Businesses WorldWide! </p>
+    <h2 style="margin-top: -15px;"> Sales And Marketing Firm</h2>
+    <p> Connect With Like Minded Firms And Sales Professionals Worldwide! </p>
        
   </div>
 
@@ -323,72 +293,24 @@ input[type=file] {
      <form>
        <input type='text' placeholder='First Name:*' required/>
        <input type='text' placeholder='Last Name:*'  required/>
+       <input type='text' placeholder='Firm Name:*'  required/>
        <input type='text' placeholder='Email:*'  required/>
        <input type='password' placeholder='Account Password:*' required/>
        <input type='password' placeholder='Confirm Password:*' required/>
 
-       <!-- Code for uploading resume documents -->
-       <label> CV/Resume(PDF): <input type="file" accept=".pdf,.doc" required> </label><br>
+       <!-- Code for TextArea Editor -->
+       <label for="businessDecription"> Brief Firm Description:* </label>
+       <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> 
+	     <script type="text/javascript">
+
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+       </script>
+       <textarea id="businessDecript" name="business_descript" placeholder="Business Description:* " required></textarea>
+
+       <!-- Code for uploading documents related to business -->
+       <h3 style="margin-top: 10px; color: rgba(0,0,0,.6);"> Upload Copy of Work(PDF): <input type="file" accept=".pdf,.doc" required> </h3>
+       <h3 style="margin-top: -35px; color: rgba(0,0,0,.6);"> Additional Information (PDF): <input type="file" accept=".pdf,.doc" required> </h3>
        
-       <label for="profilePicture"> Upload an Appropriate Profile Picture:* </label>
-       <p> Ideal Size: 150px X 150px </p>
- 
-       <!-- Code for uploading profile picture and previewing image -->
-       <input type="file" accept="image/*" onchange="preview_image(event)" required>
-       <img id="output_image" src="upload_icon.png"/> <br>
-
-       <!-- Code for years of experience options -->
-       <select id="experience_years" name="experience" required>
-          <optgroup label="Experience">
-
-          	<option value='' disabled selected>Years of Experience*</option>
-            <option value="interval1">Less than 1 year</option>
-            <option value="interval2">1 - 5 years</option>
-            <option value="interval3">6 - 10 years </option>
-            <option value="interval4">11 - 15 years </option>
-            <option value="interval5">16 - 20 years </option>
-            <option value="interval6">21 - 25 years </option>
-            <option value="interval7">26 - 30 years </option>
-            <option value="interval8">31 - 35 years </option>
-            <option value="interval9">36 - 40 years </option>
-            <option value="interval10">41 - 45 years </option>
-            <option value="interval11">46 - 50 years </option>
-            <option value="interval12">51 - 55 years </option>
-            <option value="interval13">56 - 60 years </option>
-            <option value="interval14">60+ years </option>         
-            
-          </optgroup>       
-        </select>
-
-        <!-- Code for sales technique options -->
-       	<div class="selectBox" onclick="showCheckboxes()">
-       		<select>
-       			<option> Sales Technique* </option>
-       		</select>
-       		<div class="overSelect"></div>
-       	</div>
-       	<div id="checkboxes">
-
-       		<label for="one"> <input type="checkbox" id="telesales"/> Telesales </label>
-       		<label for="two"> <input type="checkbox" id="doortodoor"/> Door to Door </label>
-       		<label for="three"> <input type="checkbox" id="onlinedemos"/> Online Demos </label>
-       		<label for="four"> <input type="checkbox" id="affiliate"/> Affiliate Link </label>
-       		<label for="five"> <input type="checkbox" id="appointment"/> Appointment Setting </label>
-       			
-       	</div>
-
-        <!-- Code for professional speciality -->
-       	<select id="speciality" style="margin-top: 20px; margin-bottom: 20px;" required>
-          <optgroup label="Sales Speciality">
-
-          	<option value='' disabled selected>Speciality*</option>
-            <option value="speciality1">B2B</option>
-            <option value="speciality2">B2C</option>
-            <option value="speciality3">Both B2B and B2C</option>      
-            
-          </optgroup>       
-        </select>
- 
 
          <!-- Code for selecting languages -->
         <div class="selectBox" onclick="showLanguageCheckboxes()">
@@ -425,7 +347,7 @@ input[type=file] {
 
        	
         <!-- Address section of code -->
-       <label for="permanentAddress" style="margin-top: 20px;"> Permanent Address: </label>
+       <label for="permanentAddress" style="margin-top: 20px;"> Firm Address: </label>
        
 	     <input type='text' placeholder='Street Addresss:' />
        
@@ -448,8 +370,6 @@ input[type=file] {
           populateCountries("country", "state"); 
       </script>
 
-
-	
 
         <!-- Contact section of code -->
        <label for="contactinfo" style="margin-top: 20px;"> Contact Information: </label>
@@ -490,4 +410,6 @@ input[type=file] {
   </div>
 
 </body>
+
+
 </html>

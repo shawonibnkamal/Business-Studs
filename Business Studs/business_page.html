@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+
+<style>
+
+body {
+  background-color: white;
+  font: 1em Helvetica;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+   
+    <!-- Placing the three business sub-categories side by side each others -->
+
+	<div class="row" style="padding: 10% 0;">
+
+       <div class="column">
+       	 <a href="retail_signup.html" style="text-decoration: none;">
+
+       	  <h3 style="text-align: center; color: green;"> Retail Business</h3>
+		  <img src="retail_photo.jpg" alt="Retail Logo" style="width:100%">
+
+		 </a>
+       </div>
+
+       <div class="column">
+       	  <a href="sme_signup.html" style="text-decoration: none;">
+          <h3 style="text-align: center; color: green;"> Small Medium Enterprise</h3>
+		  <img src="sme_photo.jpg" alt="SME Logo" style="width:100%">
+		  </a>
+       </div>
+
+       <div class="column">
+       	 <a href="corporate_signup.html" style="text-decoration: none;">
+         <h3 style="text-align: center; color: green;"> Corporate Business</h3>
+		 <img src="corporate_photo.jpg" alt="Corporate Logo" style="width:100%">
+		 </a>
+       </div>
+
+    </div>
+
+
+  
+
+</body>
+
+
+
+</html>
