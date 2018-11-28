@@ -1,0 +1,67 @@
+body {
+	background-color: #f3f3f1;
+}
+
+/*  Navbar */
+.navbar {
+	z-index: 2;
+}
+
+.vertical-menu {
+	padding-top: 100px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #303030;
+	height: 100vh;
+	z-index: 1;
+	min-width: 150px;
+}
+
+.vertical-menu a {
+	color: #ccc;
+}
+
+.vertical-menu .active {
+	color: #FFF;
+	background-color: #18d36e;
+}
+/* Profile details */
+
+.pro-pic {
+	max-width: 200px;
+}
+
+.profile-info {
+	border: 1px solid #ccc;
+	max-width: 350px;
+	margin: 10px;
+	background-color: #FFF;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* Feed */
+
+.feed-boxes{
+	border: 1px solid #ccc;
+	padding: 10px 10px 10px 80px;
+	position: relative;
+	margin: 10px;
+	background-color: #FFF;
+}
+
+.feed-pic {
+	max-width: 50px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.feed-date {
+	color: grey;
+	font-size: 14px;
+}
