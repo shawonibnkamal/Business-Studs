@@ -4,7 +4,7 @@ body {
 
 .body-part{
 	margin-left: 0px;
-	padding-left: 200px;
+	padding-left: 150px;
 }
 
 .body-part .container {
@@ -17,7 +17,7 @@ body {
 }
 
 .vertical-menu {
-	padding-top: 0px;
+	padding-top: 100px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -25,18 +25,6 @@ body {
 	height: 100%;
 	z-index: 1;
 	min-width: 150px;
-}
-
-.vertical-menu .navbar-brand {
-	margin-left: 10px;
-	font-size: 22px;
-}
-
-.vertical-menu .nav-item-brand {
-	/*background-color: #000;*/
-	margin-bottom: 20px;
-	padding: 10px 0;
-	border-bottom: 2px solid #000;
 }
 
 .vertical-menu a {
@@ -58,7 +46,7 @@ body {
 	max-width: 350px;
 	margin: 10px;
 	background-color: #FFF;
-	padding: 15px 15px 0px 15px;
+	padding-top: 10px;
 }
 
 .name {
@@ -70,13 +58,11 @@ body {
 
 .feed{
 	padding: 0px;
-	width: 60%;
-	min-width: 310px;
 }
 
 .feed-boxes{
 	border: 1px solid #ccc;
-	padding: 10px 15px 10px 80px;
+	padding: 10px 10px 10px 80px;
 	position: relative;
 	margin: 10px;
 	background-color: #FFF;
