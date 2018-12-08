@@ -450,6 +450,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 0.1em;
 }
 
+@media (max-width: 400px) {
+  .section-header h3 {
+	  font-size: 21px;
+  }
+}
+
+
 #services .section-header h3 span {
 	background:#fff; 
     padding:0 10px;

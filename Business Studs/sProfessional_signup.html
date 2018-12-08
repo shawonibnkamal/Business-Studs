@@ -96,27 +96,58 @@ body {
 }
 
 #container {
-  width: 840px;
+  max-width: 840px;
   margin: 25px auto;
 }
 
 .whysignwithus {
-  float: top;
   background-color: white;
-  width: 650px;
-  height: 255px;
   border-radius: 0 5px 5px 0;
   padding-top: 5px;
   padding-right: 20px;
+  padding-bottom: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.buslogo{
+	width: 100%;
+}
+
+.logoContainer {
+	min-width: 300px;
+	float: left;
+}
+
+.whytitle {
+	float: left;
+	min-width: 300px;
+	max-width: 500px;
+	margin-top: 50px;
 }
 
 .signup {
-  float: center;
-  width: 600px;
-  padding: 35px 3px;
+  padding: 50px 3px;
   background-color: white;
   text-align: center;
   border-radius: 5px 0 0 5px;
+}
+
+@media only screen and (max-width: 608px)  {
+	.logoContainer {
+		width: 100%;
+		padding: 0 10%;
+	}
+	
+	.buslogo {
+		max-width: 100%;
+	}
+
+	.whytitle {
+		margin-top: 20px;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 [type=text] {
@@ -359,11 +390,15 @@ input[type=file] {
 
   <!-- Placing Logo beside sign up form -->
   <div class='whysignwithus'>
-    <img src="businessLogo.png" alt="Business Logo" width="250" height="250">
+    <div class="logoContainer">
+		<img style="text-align: center;" src="businessLogo.png" class="buslogo" alt="Business Logo">
+	</div>
+	<div class="whytitle">
     <h1>  Business Studs</h1>
-    <h2 style="margin-top: -15px;"> Sales Professional</h2>
-    <p> Connect with Businesses WorldWide! </p>
-       
+		<h2 style=""> Sales Professional</h2>
+		<p> Connect with Businesses WorldWide! </p>
+	</div>
+     <div style="clear: both;"></div>  
   </div>
 
   <div class='signup'>
@@ -382,7 +417,7 @@ input[type=file] {
  
        <!-- Code for uploading profile picture and previewing image -->
        <input type="file" accept="image/*" onchange="preview_image(event)" required>
-       <img id="output_image" src="upload_icon.png"/> <br>
+       <!--<img id="output_image" src="upload_icon.png"/> <br>-->
 
        <!-- Code for years of experience options -->
        <select id="experience_years" name="experience" required>
