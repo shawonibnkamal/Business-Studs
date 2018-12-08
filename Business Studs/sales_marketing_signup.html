@@ -67,29 +67,60 @@ body {
   background-color: white;
   font: 1em Helvetica;
 }
-
 #container {
-  width: 840px;
+  max-width: 840px;
   margin: 25px auto;
 }
 
 .whysignwithus {
-  float: top;
   background-color: white;
-  width: 650px;
-  height: 255px;
   border-radius: 0 5px 5px 0;
   padding-top: 5px;
   padding-right: 20px;
+  padding-bottom: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.buslogo{
+	width: 100%;
+}
+
+.logoContainer {
+	min-width: 300px;
+	float: left;
+}
+
+.whytitle {
+	float: left;
+	min-width: 300px;
+	max-width: 300px;
+	margin-top: 20px;
 }
 
 .signup {
-  float: center;
-  width: 600px;
-  padding: 35px 3px;
+  padding: 20px 3px;
   background-color: white;
   text-align: center;
   border-radius: 5px 0 0 5px;
+}
+
+@media only screen and (max-width: 680px)  {
+	.logoContainer {
+		width: 100%;
+		padding: 0 10%;
+	}
+	
+	.buslogo {
+		max-width: 100%;
+	}
+
+	.whytitle {
+		margin-top: 20px;
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+	}
 }
 
 [type=text] {
@@ -148,7 +179,7 @@ textarea {
   margin: 0 auto;
   width: 99%;
   border: 0;
-  border-bottom: 1px solid rgba(0,0,0,.2);
+  border: 1px solid rgba(0,0,0,.2);
   height: 95px;
   line-height: 15px;  
   margin: 20px 30px 20px 0;
@@ -327,12 +358,18 @@ input[type=file] {
 	<div id='container'>
 
   <!-- Placing logo and beside sign up form-->
-  <div class='whysignwithus'>
-    <img src="businessLogo.png" alt="Business Logo" width="250" height="250">
+
+  
+    <div class='whysignwithus'>
+    <div class="logoContainer">
+		<img style="text-align: center;" src="businessLogo.png" class="buslogo" alt="Business Logo">
+	</div>
+	<div class="whytitle">
     <h1>  Business Studs</h1>
-    <h2 style="margin-top: -15px;"> Sales And Marketing Firm</h2>
-    <p> Connect With Like Minded Firms And Sales Professionals Worldwide! </p>
-       
+		<h2 style=""> Sales And Marketing Firm</h2>
+		<p> Connect With Like Minded Firms And Sales Professionals Worldwide! </p>
+	</div>
+     <div style="clear: both;"></div>  
   </div>
 
   <div class='signup'>
@@ -346,7 +383,7 @@ input[type=file] {
 
        <!-- Code for TextArea Editor -->
        <label for="businessDecription"> Brief Firm Description:* </label>
-       <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> 
+       <!--<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> -->
 	     <script type="text/javascript">
 
         bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
