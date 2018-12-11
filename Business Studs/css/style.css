@@ -315,10 +315,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.container-fluid: {
-	margin-top: -10px;
-}
-
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
   position: fixed;
@@ -454,7 +450,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 0.1em;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .section-header h3 {
 	  font-size: 21px;
   }
@@ -625,7 +621,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-img{
-	width: 400px;
+	max-width: 400px;
+	width: 100%;
 	display: block;
 	margin: 0 auto 30px auto;
 	text-align: center;
