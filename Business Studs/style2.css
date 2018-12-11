@@ -20,6 +20,32 @@
     font-weight: 700;
 }
 
+.nav-item a {
+  padding: 0 8px 10px 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  outline: none;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #FFF;
+}
+
+.nav-item li:hover > a, .nav-menu > .menu-active > a {
+  color: rgb(0, 141, 85);
+}
+
+.navbar-collapse {
+	margin-top: 10px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

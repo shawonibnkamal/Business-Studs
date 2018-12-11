@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Nav Meu Container */
 #nav-menu-container {
   float: right;
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 
 @media (min-width: 1024px) {
@@ -313,6 +313,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu ul ul {
   margin: 0;
+}
+
+.container-fluid: {
+	margin-top: -10px;
 }
 
 /* Mobile Nav Toggle */

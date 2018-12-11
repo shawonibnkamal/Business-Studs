@@ -6,7 +6,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
+  <!-- Code for header and footer -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+   <link href="style2.css" rel="stylesheet">
 <style>
 
 body {
@@ -15,15 +18,15 @@ body {
 }
 
 #container {
-  width: 840px;
+  max-width: 840px;
   margin: 25px auto;
+  padding: 0 15px;
 }
 
 .whysignwithus {
   float: right;
   background-color: white;
-  width: 480px;
-  height: 661px;
+  max-width: 480px;
   border-radius: 0 5px 5px 0;
   padding-top: 5px;
   padding-right: 20px;
@@ -31,11 +34,28 @@ body {
 
 .signup {
   float: left;
-  width: 300px;
+  max-width: 500px;
+  min-width: 300px;
   padding: 40px 20px;
   background-color: white;
   text-align: center;
   border-radius: 5px 0 0 5px;
+}
+
+@media screen and (max-width: 800px) {
+	.whysignwithus {
+		float: none;
+		margin: 0 auto;
+	}
+	
+	.whysignwithus img {
+		display: none;
+	}
+	
+	.signup {
+		float: none;
+		margin: 0 auto;
+	}
 }
 
 [type=text] {
@@ -154,12 +174,6 @@ p:nth-of-type(2) {
 
 </style>
 
-
-  <!-- Code for header and footer -->
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-   <link href="style2.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -200,6 +214,20 @@ p:nth-of-type(2) {
 
 	
   <div id='container'>
+
+  <!-- Placing logo beside sign up form -->
+  <div class='whysignwithus'>
+    <h1>Business Studs</h1>
+    <h2>Retail</h2>
+    <img src="businessLogo.png" alt="Business Logo" width="350" height="350">
+    
+    
+    <p> Grow your business in Retail with Business Studs today! </p>
+
+    
+    <a class="signup__link" href="login_page.html">I have already registered. Take me to Log in!</a>
+       
+  </div>
 
   <div class='signup'>
      <form>
@@ -276,21 +304,8 @@ p:nth-of-type(2) {
      
   </div>
 
-  <!-- Placing logo beside sign up form -->
-  <div class='whysignwithus'>
-    <h1>Business Studs</h1>
-    <h2>Retail</h2>
-    <img src="businessLogo.png" alt="Business Logo" width="350" height="350">
-    
-    
-    <p> Grow your business in Retail with Business Studs today! </p>
-
-    
-    <a class="signup__link" href="login_page.html">I have already registered. Take me to Log in!</a>
-       
-  </div>
   
-
+<div style="clear: both"></div>
   </div>
 
   <!--==========================
