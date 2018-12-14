@@ -3,8 +3,8 @@ body {
 }
 
 .body-part{
-	margin-left: 0px;
-	padding-left: 150px;
+	margin-left: 280px;
+	padding-left: 0px;
 }
 
 .body-part .container {
@@ -16,24 +16,80 @@ body {
 	z-index: 2;
 }
 
+.navbar-brand {
+	text-transform: uppercase;
+}
+
 .vertical-menu {
-	padding-top: 100px;
+	padding-top: 0px;
 	position: fixed;
 	left: 0;
 	top: 0;
 	background-color: #303030;
 	height: 100%;
-	z-index: 1;
+	z-index: 2;
 	min-width: 150px;
 }
 
+.vertical-menu .navbar-brand {
+	margin-left: 10px;
+	font-size: 22px;
+	padding: 0px;
+}
+
+.vertical-menu .nav-item-brand {
+	background-color: #262626;
+	margin-bottom: 15px;
+	padding: 10px 0;
+	/*border-bottom: 2px solid #000;*/
+}
+
 .vertical-menu a {
-	color: #ccc;
+	color: #FFF;
+	padding: 10px 0;
+}
+
+.vertical-menu i {
+	margin-right: 5px;
 }
 
 .vertical-menu .active {
 	color: #FFF;
 	background-color: #18d36e;
+}
+
+.collapsed-menu {
+	display: none;
+	background-color: #262626;
+	padding-left: 20px;
+	font-size: 2px;
+}
+
+.collapsed-menu .navbar-brand {
+	font-size: 25px;
+}
+
+.collapsed-menu a {
+	color: #FFF;
+}
+.close-vertical {
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	background:rgba(0,0,0,0.5);
+}
+
+.close-vertical i {
+	color: #FFF;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+}
+
+.close-vertical a {
+	color: #FFF;
 }
 /* Profile details */
 
@@ -44,9 +100,10 @@ body {
 .profile-info {
 	border: 1px solid #ccc;
 	max-width: 350px;
+	min-width: 290px;
 	margin: 10px;
 	background-color: #FFF;
-	padding-top: 10px;
+	padding: 15px 15px 0px 15px;
 }
 
 .name {
@@ -58,11 +115,13 @@ body {
 
 .feed{
 	padding: 0px;
+	width: 60%;
+	min-width: 310px;
 }
 
 .feed-boxes{
 	border: 1px solid #ccc;
-	padding: 10px 10px 10px 80px;
+	padding: 10px 15px 10px 80px;
 	position: relative;
 	margin: 10px;
 	background-color: #FFF;
@@ -79,3 +138,46 @@ body {
 	color: grey;
 	font-size: 14px;
 }
+
+
+/* ======== Responsiveness =====*/
+
+@media screen and (max-width: 1100px) {
+	.feed {
+		width: 50%;
+	}
+	
+	
+}
+
+@media screen and (max-width: 910px) {
+		.profile-info {
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	.feed {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.vertical-menu {
+		display: none;
+	}
+	
+	.vertical-menu .navbar-brand{
+		display: none;
+	}
+	
+	.body-part {
+		margin: 0px;
+	}
+	
+
+	
+	.collapsed-menu{
+		display: block;
+	}
+}
+
