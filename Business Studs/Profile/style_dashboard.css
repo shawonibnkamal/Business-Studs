@@ -2,6 +2,13 @@ body {
 	background-color: #f3f3f1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
 .body-part{
 	margin-left: 280px;
 	padding-left: 0px;
@@ -29,6 +36,7 @@ body {
 	height: 100%;
 	z-index: 2;
 	min-width: 150px;
+	overflow-y: scroll;
 }
 
 .vertical-menu .navbar-brand {
@@ -95,6 +103,7 @@ body {
 
 .pro-pic {
 	max-width: 200px;
+	margin-bottom: 10px;
 }
 
 .profile-info {
@@ -106,9 +115,14 @@ body {
 	padding: 15px 15px 0px 15px;
 }
 
+.profile-info i {
+	margin-right: 5px;
+}
+
 .name {
 	font-weight: bold;
 	font-size: 20px;
+	margin-top: 10px;
 }
 
 /* Feed */
@@ -127,6 +141,14 @@ body {
 	background-color: #FFF;
 }
 
+.feed-boxes .fa-thumbs-up:hover{
+	color: green;
+}
+
+.feed-boxes .fa-thumbs-down:hover {
+	color: red;
+}
+
 .feed-pic {
 	max-width: 50px;
 	position: absolute;
@@ -139,6 +161,17 @@ body {
 	font-size: 14px;
 }
 
+.feed-boxes .comment-form {
+	display: none;
+}
+
+.comment-boxes {
+	border-radius: 5px;
+	padding: 0px 0px 0px 80px;
+	position: relative;
+	margin: 10px;
+	background-color:  #f3f3f1;
+}
 
 /* ======== Responsiveness =====*/
 
@@ -151,7 +184,7 @@ body {
 }
 
 @media screen and (max-width: 910px) {
-		.profile-info {
+	.profile-info {
 		width: 100%;
 		max-width: 100%;
 	}
@@ -181,3 +214,15 @@ body {
 	}
 }
 
+@media screen and (min-width: 620px) {
+	
+}
+
+/* ========= Main interaction page ======== */
+
+.block {
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	margin: 10px 5px;
+	padding: 10px;
+}
