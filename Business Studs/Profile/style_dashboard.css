@@ -329,3 +329,97 @@ h1, h2, h3, h4, h5, h6 {
 .about-business i {
 	margin-right: 5px;
 }
+
+
+/* ========== Project page after accepted ==============*/
+.message-list {
+	background-color: #FFF;
+	margin: 10px 5px;
+	padding: 5px 0px;
+	border: 1px solid #ccc;
+	max-height: 400px;
+	overflow-y: scroll;
+}
+.message-list ul{
+	list-style: none;
+	
+}
+
+.message-active {
+	background-color: #007bff;
+	color: #FFF;
+}
+
+.message-active a {
+	color: #FFF;
+}
+
+.message-list ul {
+	padding: 0;
+}
+
+.message-list a {
+	text-decoration: none;
+}
+
+.message-list li {
+	padding: 5px 10px;
+}
+
+.message-list li:hover {
+	background-color: #f2f2f2;
+}
+
+.message-form {
+	margin-top: 5px;
+}
+
+.message-form input {
+	width: 100%;
+}
+.message-form button {
+	height: 38px;
+}
+
+.message-form .col-10 {
+	padding: 0 0 0 15px;
+}
+
+.message-form .col-2 {
+	padding: 0px 15px 0 10px;
+}
+
+.message {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 15px 0px;
+	border-radius: 5px;
+}
+
+.incoming-message {
+	background-color: #f2f2f2;
+	margin-right: 30%;
+}
+
+.outgoing-message {
+	background-color: #18d36e;
+	color: #FFF;
+	margin-left: 30%;
+	text-align: right;
+}
+
+.message-form button {
+	background-color: #18d36e;
+	border-color: #18d36e;
+	width: 100%;
+}
+
+.message-form button:hover {
+	background-color: #0f8a48;
+	border-color: #0f8a48;
+}
+
+.message-block {
+	max-height: 70%;
+	overflow-y: scroll;
+}
