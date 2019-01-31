@@ -423,3 +423,32 @@ h1, h2, h3, h4, h5, h6 {
 	max-height: 70%;
 	overflow-y: scroll;
 }
+
+/* ======= Work Ons ====== */
+
+.workons-list {
+	padding: 0px 10px;
+	border-left: 3px solid #18d36e;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.workons-action {
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	display: none;
+}
+
+.workons-list:hover {
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: .2s;
+}
+
+.edit:hover {
+	color: green;
+}
+
+.delete:hover {
+	color: red;
+}
