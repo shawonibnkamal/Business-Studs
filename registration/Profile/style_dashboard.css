@@ -1,0 +1,425 @@
+body {
+	background-color: #f3f3f1;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.body-part{
+	margin-left: 280px;
+	padding-left: 0px;
+}
+
+.body-part .container {
+	margin-left: 0;
+}
+
+/*  Navbar */
+.navbar {
+	z-index: 2;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+}
+
+.vertical-menu {
+	padding-top: 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #303030;
+	height: 100%;
+	z-index: 2;
+	min-width: 150px;
+	overflow-y: scroll;
+}
+
+.vertical-menu .navbar-brand {
+	margin-left: 10px;
+	font-size: 22px;
+	padding: 0px;
+}
+
+.vertical-menu .nav-item-brand {
+	background-color: #262626;
+	margin-bottom: 15px;
+	padding: 10px 0;
+	/*border-bottom: 2px solid #000;*/
+}
+
+.vertical-menu a {
+	color: #FFF;
+	padding: 10px 0;
+}
+
+.vertical-menu i {
+	margin-right: 5px;
+}
+
+.vertical-menu .active {
+	color: #FFF;
+	background-color: #18d36e;
+}
+
+.collapsed-menu {
+	display: none;
+	background-color: #262626;
+	padding-left: 20px;
+	font-size: 2px;
+}
+
+.collapsed-menu .navbar-brand {
+	font-size: 25px;
+}
+
+.collapsed-menu a {
+	color: #FFF;
+}
+.close-vertical {
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	background:rgba(0,0,0,0.5);
+}
+
+.close-vertical i {
+	color: #FFF;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+}
+
+.close-vertical a {
+	color: #FFF;
+}
+/* Profile details */
+
+.pro-pic {
+	max-width: 200px;
+	margin-bottom: 10px;
+	
+	font-size: 45px;
+	color: #18d36e;
+}
+
+.profile-info {
+	border: 1px solid #ccc;
+	max-width: 350px;
+	min-width: 290px;
+	margin: 10px;
+	background-color: #FFF;
+	padding: 15px 15px 0px 15px;
+}
+
+.profile-info i {
+	margin-right: 5px;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+
+/* Feed */
+
+.feed{
+	padding: 0px;
+	width: 60%;
+	min-width: 310px;
+}
+
+.feed-boxes{
+	border: 1px solid #ccc;
+	padding: 10px 15px 10px 80px;
+	position: relative;
+	margin: 10px;
+	background-color: #FFF;
+}
+
+.feed-boxes .fa-thumbs-up:hover{
+	color: green;
+}
+
+.feed-boxes .fa-thumbs-down:hover {
+	color: red;
+}
+
+.feed-pic {
+	max-width: 50px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.feed-date {
+	color: grey;
+	font-size: 14px;
+}
+
+.feed-boxes .comment-form {
+	display: none;
+}
+
+.comment-boxes {
+	border-radius: 5px;
+	padding: 0px 0px 0px 80px;
+	position: relative;
+	margin: 10px;
+	background-color:  #f3f3f1;
+}
+
+/* ======== Responsiveness =====*/
+
+@media screen and (max-width: 1100px) {
+	.feed {
+		width: 50%;
+	}
+	
+	
+}
+
+@media screen and (max-width: 910px) {
+	.profile-info {
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	.feed {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.vertical-menu {
+		display: none;
+	}
+	
+	.vertical-menu .navbar-brand{
+		display: none;
+	}
+	
+	.body-part {
+		margin: 0px;
+	}
+	
+
+	
+	.collapsed-menu{
+		display: block;
+	}
+}
+
+@media screen and (min-width: 620px) {
+	
+}
+
+/* ========= Main interaction page ======== */
+/* Post project */
+.form_label {
+	font-size: 18px;
+}
+
+.form-group {
+	margin-bottom: 30px;
+}
+
+.block {
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	margin: 10px 5px;
+	padding: 10px;
+}
+
+.block2 {
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0px;
+	background-color:  #f3f3f1;
+}
+
+.paymentBlock1, .paymentBlock2 {
+	display: none;
+}
+
+#currency-input, #currency {
+	width: 80px;
+}
+
+.dealBlock2 {
+	display: none;
+}
+
+.tail-select {
+	display: block;
+}
+
+
+/* ============ Search projects =========== */
+.search-form input {
+	width: 100%;
+}
+.search-form button {
+	height: 38px;
+}
+
+.search-form .col-10 {
+	padding: 0 0 0 15px;
+}
+
+.search-form .col-2 {
+	padding: 0px 0 0 10px;
+}
+
+.search-blocks {
+	position: relative;
+	min-height: 80px;
+	padding-left: 55px;
+}
+
+.search-blocks .search-pic {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 35px;
+	color: #18d36e;
+}
+
+.search-blocks-link {
+	text-decoration: none !important;
+	color: #000;
+}
+
+.page-number {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.search-filters .tail-select {
+	width: 100%;
+}
+
+/* ============ Project main page =========== */
+
+.project-title {
+	float: left;
+}
+
+.project-budget {
+	float:right;
+	font-weight: bold;
+}
+
+.about-business i {
+	margin-right: 5px;
+}
+
+
+/* ========== Project page after accepted ==============*/
+.message-list {
+	background-color: #FFF;
+	margin: 10px 5px;
+	padding: 5px 0px;
+	border: 1px solid #ccc;
+	max-height: 400px;
+	overflow-y: scroll;
+}
+.message-list ul{
+	list-style: none;
+	
+}
+
+.message-active {
+	background-color: #007bff;
+	color: #FFF;
+}
+
+.message-active a {
+	color: #FFF;
+}
+
+.message-list ul {
+	padding: 0;
+}
+
+.message-list a {
+	text-decoration: none;
+}
+
+.message-list li {
+	padding: 5px 10px;
+}
+
+.message-list li:hover {
+	background-color: #f2f2f2;
+}
+
+.message-form {
+	margin-top: 5px;
+}
+
+.message-form input {
+	width: 100%;
+}
+.message-form button {
+	height: 38px;
+}
+
+.message-form .col-10 {
+	padding: 0 0 0 15px;
+}
+
+.message-form .col-2 {
+	padding: 0px 15px 0 10px;
+}
+
+.message {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 15px 0px;
+	border-radius: 5px;
+}
+
+.incoming-message {
+	background-color: #f2f2f2;
+	margin-right: 30%;
+}
+
+.outgoing-message {
+	background-color: #18d36e;
+	color: #FFF;
+	margin-left: 30%;
+	text-align: right;
+}
+
+.message-form button {
+	background-color: #18d36e;
+	border-color: #18d36e;
+	width: 100%;
+}
+
+.message-form button:hover {
+	background-color: #0f8a48;
+	border-color: #0f8a48;
+}
+
+.message-block {
+	max-height: 70%;
+	overflow-y: scroll;
+}
